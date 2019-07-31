@@ -14,6 +14,7 @@ if(playerInput == '1'){
 
 printMessage('Twój ruch to: ' + playerMove);
 
+//dodanie prompt
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
@@ -30,3 +31,17 @@ if(playerInput == '1'){
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+//wynik gry
+
+if( computerMove == 'kamień' && playerMove == 'papier'){
+  printMessage('Ty wygrywasz!');
+} else if( computerMove == 'nożyce' && playerMove == 'kamień'){
+  printMessage('Ty wygrywasz!');
+} else if( computerMove == 'papier' && playerMove == 'nożyce'){
+  printMessage('Ty wygrywasz!');
+} else if( computerMove == 'kamień' && playerMove == 'kamień'){
+  printMessage('Remis!');
+} else if( computerMove == 'kamień' && playerMove == '4'){
+  printMessage('nieznany ruch!');
+}
