@@ -1,4 +1,4 @@
-
+{
 let argButtonName, buttonPaper, buttonRock, buttonScissors;
 
 
@@ -18,13 +18,14 @@ function buttonClicked(argButtonName) {
   displayResult(playerMove, computerMove);
 }
 
-buttonScissors = document.getElementById('play-scissors');
-buttonPaper = document.getElementById('play-paper');
-buttonRock = document.getElementById('play-rock');
-buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); printMessage('kamień został kliknięty'); });
-buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); printMessage('papier został kliknięty'); });
-buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); printMessage('nożyce zostały kliknięte'); });
-
+{
+const buttonScissors = document.getElementById('play-scissors');
+const buttonPaper = document.getElementById('play-paper');
+const buttonRock = document.getElementById('play-rock');
+buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
+buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
+buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
+}
 
 let argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
 
@@ -73,3 +74,4 @@ buttonScissors.addEventListener('click', function(){
     });
   })
 })
+}
