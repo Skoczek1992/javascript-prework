@@ -1,5 +1,5 @@
 {
-let argButtonName, buttonPaper, buttonRock, buttonScissors;
+let argButtonName;
 
 
 //opis funkcji
@@ -18,14 +18,12 @@ function buttonClicked(argButtonName) {
   displayResult(playerMove, computerMove);
 }
 
-{
 const buttonScissors = document.getElementById('play-scissors');
 const buttonPaper = document.getElementById('play-paper');
 const buttonRock = document.getElementById('play-rock');
 buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
 buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
 buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
-}
 
 let argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
 
@@ -60,18 +58,7 @@ function displayResult(argPlayerMove, argComputerMove) {
     printMessage('Remis!');
   } else if( argComputerMove == 'kamień' && argPlayerMove == '4'){
     printMessage('nieznany ruch!');
-  } else (argComputerMove == 'nożyce' && argPlayerMove == 'papier')
-    printMessage('Przegrywasz :(');
+  } else printMessage('Przegrywasz :(');
 }
 
-
-buttonRock.addEventListener('click', function(){
-    buttonClicked('kamień')
-buttonPaper.addEventListener('click', function(){
-    buttonClicked('papier')
-buttonScissors.addEventListener('click', function(){
-    buttonClicked('nożyce')
-    });
-  })
-})
 }
